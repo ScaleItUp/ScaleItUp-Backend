@@ -18,7 +18,7 @@ Flask-Cors==4.0.0
 gunicorn==21.2.0
 idna==3.4
 ipykernel
-ipython=
+ipython
 itsdangerous
 jedi
 Jinja2
