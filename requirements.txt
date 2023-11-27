@@ -12,7 +12,7 @@ decorator==5.1.1
 distlib==0.3.7
 dnspython
 executing==1.2.0
-filelock==3.13.1
+filelock
 Flask
 Flask-Cors==4.0.0
 gunicorn==21.2.0
