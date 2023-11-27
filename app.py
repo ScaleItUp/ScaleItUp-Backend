@@ -77,41 +77,16 @@ def hello_world():
 # TODO:
 # @jwt_required()
 def getWeights():
-    # result = fetchWeightsFromDB()
+    result = fetchWeightsFromDB()
 
-    # if result['isError']:
-    #     returnObject = createErrorObject(
-    #         statusCode=result['statusCode'], message=result['message'])
-    #     return jsonify(returnObject), result['statusCode']
-    # else:
-    #     returnObject = createWeightObject(
-    #         statusCode=result['statusCode'], weights=result['weights'], message=result['message'])
-    #     return jsonify(returnObject), result['statusCode']
-    
-    return {
-    "code": 400,
-    "data": {
-        "message": "Weights Data fetched successfully!",
-        "weights": [
-            {
-                "total_weight": 7000.0,
-                "type": "nails",
-                "unit_weight": 30.0
-            },
-            {
-                "total_weight": 12800.0,
-                "type": "screws",
-                "unit_weight": 70.0
-            },
-            {
-                "total_weight": 14520.0,
-                "type": "candy",
-                "unit_weight": 65.0
-            }
-        ]
-    },
-    "message": "Success"
-    };
+    if result['isError']:
+        returnObject = createErrorObject(
+            statusCode=result['statusCode'], message=result['message'])
+        return jsonify(returnObject), result['statusCode']
+    else:
+        returnObject = createWeightObject(
+            statusCode=result['statusCode'], weights=result['weights'], message=result['message'])
+        return jsonify(returnObject), result['statusCode']
     
 
 # fetches data from the DB
