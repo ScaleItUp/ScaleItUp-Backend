@@ -66,6 +66,12 @@ def createWeightObject(statusCode, weights, message):
         'message': 'Success'
     }
 
+#test route
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+
 # route for getting weights
 @app.route('/api/get-weights', methods=['GET'])
 # TODO:
@@ -150,6 +156,3 @@ def fetchWeightsFromDB():
             'message': 'Server error: ' + str(e)
         }
         return resultObject
-
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
