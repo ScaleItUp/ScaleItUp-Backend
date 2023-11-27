@@ -3,9 +3,13 @@ from flask import Flask, jsonify, request
 from pymongo import MongoClient
 from pymongo.errors import PyMongoError
 from enum import Enum
+from flask_cors import CORS
 
 #app
 app = Flask(__name__)
+
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 #config
 MONGO_URI = f'mongodb+srv://mini-project:CMZTBb6mt6EF1H6s@miniprojects.kb2cknx.mongodb.net/?retryWrites=true&w=majority'
