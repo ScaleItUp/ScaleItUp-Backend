@@ -46,10 +46,8 @@ python-dateutil
 pyzmq
 requests
 requests-oauthlib
-scikit-learn
 scipy
 six
-sklearn
 stack-data
 threadpoolctl
 tornado
