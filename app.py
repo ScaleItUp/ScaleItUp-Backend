@@ -12,7 +12,7 @@ cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 #config
-MONGO_URI = f'mongodb+srv://mini-project:CMZTBb6mt6EF1H6s@miniprojects.kb2cknx.mongodb.net/?retryWrites=true&w=majority'
+MONGO_URI = <add your own uri>
 DB_NAME = 'ScaleKit'
 WEIGHTS_COLLECTION = 'Weights'
 
